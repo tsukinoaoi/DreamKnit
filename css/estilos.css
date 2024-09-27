@@ -1,0 +1,27 @@
+  /* Estilo personalizado para el menú offcanvas */
+  .offcanvas {
+    background-color: #FA9EA9 !important; /* Color de fondo */
+    color: #000; /* Color de texto negro */
+}
+.offcanvas .nav-link {
+    color: #000; /* Color de texto de los enlaces */
+}
+.offcanvas .nav-link:hover {
+    color: #fff; /* Color del texto en hover */
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo en hover */
+}
+.offcanvas-header .btn-close {
+    color: #000; /* Color del botón de cerrar */
+}
+
+#loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura de la pantalla */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    position: fixed;
+    width: 100%;
+    z-index: 1040; /* Para estar por encima del contenido */
+}
