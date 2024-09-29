@@ -27,3 +27,17 @@
 }
 
 
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.star-rating {
+    color: #FFD700;
+}
+
+.video-title
+{
+    color: white;
+}
