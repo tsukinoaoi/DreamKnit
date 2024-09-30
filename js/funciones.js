@@ -28,5 +28,5 @@ window.addEventListener('load', function() {
             progressBar.style.width = width + '%';
             progressBar.setAttribute('aria-valuenow', width);
         }
-    }, 500); // Aumentar la barra cada 500 ms (5 segundos / 5 incrementos)
+    }, 100); // Aumentar la barra cada 500 ms (5 segundos / 5 incrementos)
 });
