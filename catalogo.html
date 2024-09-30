@@ -10,6 +10,22 @@
     <link rel="stylesheet" href="./css/estilos.css">
 
     <title>DreamKnit</title>
+    <script defer>
+        // Función para actualizar los enlaces de WhatsApp
+        document.addEventListener("DOMContentLoaded", function() {
+            const productos = document.querySelectorAll(".card");
+
+            productos.forEach(function(producto) {
+                const titulo = producto.querySelector(".card-title").textContent;
+                const botonWhatsApp = producto.querySelector(".btn-whatsapp");
+
+                // Actualizar el enlace del botón de WhatsApp con el título del producto
+                const mensaje = `Hola, me interesa el producto: ${titulo}`;
+                const numeroWhatsApp = "+50588237177";
+                botonWhatsApp.href = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensaje)}`;
+            });
+        });
+    </script>
   </head>
   <body >
 
@@ -46,129 +62,92 @@
 
   <div class="container-fluid">
     <div class="container my-4">
-      <h1 class="text-center">Catálogo de Productos</h1>
-      <div class="row">
-          <!-- Producto 1 -->
-          <div class="col-md-6 col-lg-4">
-              <div class="card">
-                  <img src="images/prod1.jpeg" class="card-img-top" alt="Producto 1">
-                  <div class="card-body">
-                      <h5 class="card-title">Producto 1</h5>
-                      <p class="card-text">Descripción breve del producto 1.</p>
-                      <a href="#" class="btn btn-primary">Pedir</a>
-                  </div>
-              </div>
-          </div>
-          <!-- Producto 2 -->
-          <div class="col-md-6 col-lg-4">
-              <div class="card">
-                  <img src="images/prod2.jpg" class="card-img-top" alt="Producto 2">
-                  <div class="card-body">
-                      <h5 class="card-title">Producto 2</h5>
-                      <p class="card-text">Descripción breve del producto 2.</p>
-                      <a href="#" class="btn btn-primary">Pedir</a>
-                  </div>
-              </div>
-          </div>
-          <!-- Producto 3 -->
-          <div class="col-md-6 col-lg-4">
-              <div class="card">
-                  <img src="images/prod3.jfif" class="card-img-top" alt="Producto 3">
-                  <div class="card-body">
-                      <h5 class="card-title">Producto 3</h5>
-                      <p class="card-text">Descripción breve del producto 3.</p>
-                      <a href="#" class="btn btn-primary">Pedir</a>
-                  </div>
-              </div>
-          </div>
-          <!-- Producto 4 -->
-          <div class="col-md-6 col-lg-4">
-              <div class="card">
-                  <img src="images/prod4.webp" class="card-img-top" alt="Producto 4">
-                  <div class="card-body">
-                      <h5 class="card-title">Producto 4</h5>
-                      <p class="card-text">Descripción breve del producto 4.</p>
-                      <a href="#" class="btn btn-primary">Pedir</a>
-                  </div>
-              </div>
-          </div>
-          <!-- Producto 5 -->
-          <div class="col-md-6 col-lg-4">
-              <div class="card">
-                  <img src="images/prod5.jpg" class="card-img-top" alt="Producto 5">
-                  <div class="card-body">
-                      <h5 class="card-title">Producto 5</h5>
-                      <p class="card-text">Descripción breve del producto 5.</p>
-                      <a href="#" class="btn btn-primary">Pedir</a>
-                  </div>
-              </div>
-          </div>
-          <!-- Producto 6 -->
-          <div class="col-md-6 col-lg-4">
-              <div class="card">
-                  <img src="images/prod6.jpg" class="card-img-top" alt="Producto 6">
-                  <div class="card-body">
-                      <h5 class="card-title">Producto 6</h5>
-                      <p class="card-text">Descripción breve del producto 6.</p>
-                      <a href="#" class="btn btn-primary">Pedir</a>
-                  </div>
-              </div>
-          </div>
-          <!-- Producto 7 -->
-          <div class="col-md-6 col-lg-4">
-              <div class="card">
-                  <img src="images/prod7.jfif" class="card-img-top" alt="Producto 7">
-                  <div class="card-body">
-                      <h5 class="card-title">Producto 7</h5>
-                      <p class="card-text">Descripción breve del producto 7.</p>
-                      <a href="#" class="btn btn-primary">Pedir</a>
-                  </div>
-              </div>
-          </div>
-          <!-- Producto 8 -->
-          <div class="col-md-6 col-lg-4">
-              <div class="card">
-                  <img src="images/prod8.jfif" class="card-img-top" alt="Producto 8">
-                  <div class="card-body">
-                      <h5 class="card-title">Producto 8</h5>
-                      <p class="card-text">Descripción breve del producto 8.</p>
-                      <a href="#" class="btn btn-primary">Pedir</a>
-                  </div>
-              </div>
-          </div>
-          <!-- Producto 9 -->
-          <div class="col-md-6 col-lg-4">
-              <div class="card">
-                  <img src="images/prod9.jpeg" class="card-img-top" alt="Producto 9">
-                  <div class="card-body">
-                      <h5 class="card-title">Producto 9</h5>
-                      <p class="card-text">Descripción breve del producto 9.</p>
-                      <a href="https://api.whatsapp.com/send?phone=+50588237177&text=hola,%20me%20interesan%20las%20esferas%20de%20lana" class="btn btn-primary">
-                        <i class="fas fa-shopping-cart"></i> Pedir al WhatsApp
-                    </a>
-                    
-                  </div>
-              </div>
-          </div>
-          <!-- Producto 10 -->
-          <div class="col-md-6 col-lg-4">
-              <div class="card">
-                  <img src="images/prod10.jpg" class="card-img-top" alt="Producto 10">
-                  <div class="card-body">
-                      <h5 class="card-title">Gorros de lana</h5>
-                      <p class="card-text">Descripción breve del producto 10.</p>
-                      <a href="https://api.whatsapp.com/send?phone=+50588237177&text=hola,%20me%20interesan%20los%20gorritos%20de%20lana" class="btn btn-primary">
-                        <i class="fas fa-shopping-cart"></i> Pedir al WhatsApp
-                    </a>
-                    
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-    
+        <h1 class="text-center">Catálogo de Productos</h1>
+        <div class="row">
+            <!-- Producto 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="images/peluches.PNG" class="card-img-top" alt="Peluches de lana">
+                    <div class="card-body">
+                        <h5 class="card-title">Peluches de lana</h5>
+                        <p class="card-text">Nuestros peluches son los compañeros perfectos para grandes y pequeños. Hechos con lana suave y de alta calidad.</p>
+                        <a href="#" class="btn btn-primary btn-whatsapp">
+                            <i class="fas fa-shopping-cart"></i> Pedir al WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="images/prod2.jpg" class="card-img-top" alt="Muñecos de lana">
+                    <div class="card-body">
+                        <h5 class="card-title">Muñecos de lana</h5>
+                        <p class="card-text">Perfectos para regalar o para decorar tu propia casa.</p>
+                        <a href="#" class="btn btn-primary btn-whatsapp">
+                            <i class="fas fa-shopping-cart"></i> Pedir al WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="images/prod3.jfif" class="card-img-top" alt="Discos decorativos">
+                    <div class="card-body">
+                        <h5 class="card-title">Discos decorativos</h5>
+                        <p class="card-text">Cada pieza es única y aporta un toque rústico y artesanal a tu decoración.</p>
+                        <a href="#" class="btn btn-primary btn-whatsapp">
+                            <i class="fas fa-shopping-cart"></i> Pedir al WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="images/prod4.webp" class="card-img-top" alt="Ojos de Dios">
+                    <div class="card-body">
+                        <h5 class="card-title">Ojos de Dios</h5>
+                        <p class="card-text">Amuletos llenos de significado, tejidos a mano con lana natural y siguiendo la tradición wixárika.</p>
+                        <a href="#" class="btn btn-primary btn-whatsapp">
+                            <i class="fas fa-shopping-cart"></i> Pedir al WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="images/prod5.jpg" class="card-img-top" alt="Pulseras de mano">
+                    <div class="card-body">
+                        <h5 class="card-title">Pulseras de mano</h5>
+                        <p class="card-text">Cada pieza es personalizada y aporta un toque especial a tu estilo.</p>
+                        <a href="#" class="btn btn-primary btn-whatsapp">
+                            <i class="fas fa-shopping-cart"></i> Pedir al WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src="images/prod6.jpg" class="card-img-top" alt="Esferas decorativas">
+                    <div class="card-body">
+                        <h5 class="card-title">Esferas decorativas</h5>
+                        <p class="card-text">Elaboradas con lana natural, estas esferas son suaves al tacto y respetuosas con el medio ambiente.</p>
+                        <a href="#" class="btn btn-primary btn-whatsapp">
+                            <i class="fas fa-shopping-cart"></i> Pedir al WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-  </div>
+
+
     <!-- Botón para regresar a la página principal -->
     <div class="text-center mt-4">
         <a href="index.html" class="btn btn-secondary">Volver a incio</a>
