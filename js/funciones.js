@@ -2,7 +2,7 @@
 window.addEventListener('load', function() {
     const progressBar = document.getElementById("progress-bar");
     const loadingText = document.getElementById("loading-text");
-    const loadingMessages = ["imágenes 100%", "catálogo 100%", "preferencias de usuario 100%"];
+    const loadingMessages = ["recursos 50%", "recursos 90%", "recursos 100%"];
     let width = 0;
     let messageIndex = 0;
 
