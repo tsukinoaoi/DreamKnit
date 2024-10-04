@@ -46,7 +46,12 @@
 
     <div class="container my-4">
         <h1 class="text-center">Pedido Personalizado</h1>
-
+   <!-- Botones adicionales -->
+   <div class="d-flex justify-content-between mb-4">
+    <a href="catalogo.html" class="btn btn-secondary">
+        <i class="fas fa-box-open"></i> regresar
+    </a>
+</div>
         <form id="customOrderForm">
             <div class="mb-3">
                 <label for="material" class="form-label">Material</label>
@@ -86,6 +91,7 @@
                     <option value="flor" data-price="15">Flor ($15)</option>
                     <option value="otro" data-price="0">Otro</option>
                 </select>
+             
             </div>
 
             <div id="otherFigureContainer" class="mb-3" style="display: none;">
