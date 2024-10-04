@@ -102,6 +102,11 @@
 
         <div id="successMessage" class="alert alert-success mt-4" style="display: none;">
             ¡Tu pedido personalizado ha sido enviado exitosamente!
+            <!-- Botón para regresar a la página principal -->
+        <div class="text-center mt-4">
+            <a href="catalogo.html" class="btn btn-secondary">Volver a catalogo</a>
+        </div>
+        <br>
         </div>
     </div>
 
@@ -154,10 +159,9 @@
             let figureDescription = figure === 'otro' ? otherFigure : figure;
             let message = `Pedido Personalizado:\nMaterial: ${material}\nColor: ${color}\nDescripción: ${description}\nTamaño: ${size}\nFigura: ${figureDescription}\nTotal: $${total}`;
 
-            // Redirigir a WhatsApp en la misma ventana
-            const numeroWhatsApp = '+50588237177';
-            const whatsappUrl = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(message)}`;
-            window.location.href = whatsappUrl;
+            // Redirigir a WhatsApp
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=+50588237177&text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
 
             // Mostrar el mensaje de éxito
             document.getElementById('successMessage').style.display = 'block';
