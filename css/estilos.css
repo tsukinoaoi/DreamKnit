@@ -1,10 +1,10 @@
   /* Estilo personalizado para el menú offcanvas */
   .offcanvas {
-    background-color: #FA9EA9 !important; /* Color de fondo */
+    background-color: #EE457C !important; /* Color de fondo */
     color: #000; /* Color de texto negro */
 }
 .offcanvas .nav-link {
-    color: #000; /* Color de texto de los enlaces */
+    color: #fffefe; /* Color de texto de los enlaces */
 }
 .offcanvas .nav-link:hover {
     color: #fff; /* Color del texto en hover */
@@ -44,4 +44,26 @@
 .navbar {
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+
+ /* Estilo para el botón flotante */
+ .back-button {
+    position: fixed;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    bottom: 5%; /* Distancia desde la parte inferior */
+    right: 20px; /* Distancia desde la derecha */
+    background-color: #EE457C; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: 1px; /* Sin borde */
+    border-radius: 50%; /* Botón circular */
+    width: 70px; /* Ancho del botón */
+    height: 50px; /* Alto del botón */
+    display: flex;
+    align-items: center; /* Centrar el contenido verticalmente */
+    justify-content: center; /* Centrar el contenido horizontalmente */
+    font-size: 16px; /* Tamaño de la fuente */
+    text-decoration: none;
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+    z-index: 1000; /* Asegurarse de que esté en frente */
 }
