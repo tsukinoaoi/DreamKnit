@@ -12,7 +12,7 @@ function mostrarSaludo() {
         imagenUrl = "../images/mañana.png"; 
     } else if (horaActual >= 12 && horaActual < 18) {
         saludo = "Buenas tardes";
-        imagenUrl = "./images/tarde.png"; 
+        imagenUrl = "../images/tarde.png"; 
     } else {
         saludo = "Buenas noches";
         imagenUrl = "../images/noche.png"; 
