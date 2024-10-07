@@ -40,7 +40,7 @@ function mostrarHoraActual() {
     horas = horas ? horas : 12; // Si la hora es 0, cambiarla a 12
 
     // Mostrar la hora actual en formato 12 horas HH:MM:SS AM/PM
-    horaElement.textContent = `Hora actual: ${horas}:${minutos}:${segundos} ${ampm}`;
+    horaElement.textContent = `Hora: ${horas}:${minutos}:${segundos} ${ampm}`;
 }
 
 // Actualizar la hora cada segundo
