@@ -51,13 +51,13 @@
  .back-button {
     position: fixed;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    bottom: 0%; /* Distancia desde la parte inferior */
+    bottom: 1%; /* Distancia desde la parte inferior */
     right: 20px; /* Distancia desde la derecha */
-    background-color: #a290fc; /* Color de fondo */
-    color: black; /* Color del texto */
+    background-color: #D1BCFF; /* Color de fondo */
+    color: #3B2572; /* Color del texto */
     border: 1px; /* Sin borde */
-    border-radius: 37%; /* Botón circular */
-    width: 85px; /* Ancho del botón */
+    border-radius: 34%; /* Botón circular */
+    width: 88px; /* Ancho del botón */
     height: 40px; /* Alto del botón */
     display: flex;
     align-items: center; /* Centrar el contenido verticalmente */
