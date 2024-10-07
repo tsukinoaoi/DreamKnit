@@ -54,7 +54,7 @@
   </div>
 
   <div class="container mt-5">
-    <h1 class="text-center mb-4">¡Gracias por visitarnos!</h1>
+    <h1 class="text-center mb-4" style="color: #EE457C;" >¡Gracias por visitarnos!</h1>
     <p class="text-center mb-4">Estamos encantados de que estés aquí. Conéctate con nosotros a través de nuestras redes sociales:</p>
 
     <div class="text-center social-icons">
@@ -69,10 +69,38 @@
         <p>@DreamKnit</p>
      
     </div>
-
+    <div class="container-fluid">
+        <!-- Carrusel -->
+        <div id="carruselImagenes" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+              <!-- Primera imagen -->
+              <div class="carousel-item active">
+                  <img src="images/corrousel1.jpeg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <!-- Segunda imagen -->
+              <div class="carousel-item">
+                  <img src="images/carrousel2.jpeg" class="d-block w-100" alt="Imagen 2">
+              </div>
+          </div>
+          
+          <!-- Controles del carrusel (anterior y siguiente) -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carruselImagenes" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carruselImagenes" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+          </button>
+      </div>
+    </div>
     <div class="text-center mt-4">
         <p>¡Síguenos para más tutoriales y manualidades!</p>
     </div>
+    <br>
+    <br>
+
+
     <a href="javascript:history.back()" class="back-button"> volver</a> <!-- Botón de regreso -->
 
     <br>
