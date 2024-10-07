@@ -9,13 +9,13 @@ function mostrarSaludo() {
     if (horaActual >= 6 && horaActual < 12)
          {
         saludo = "Buenos días";
-        imagenUrl = window.location.origin +"/images/mañana.png"; 
+        imagenUrl ="https://i.pinimg.com/564x/22/85/f3/2285f384f94a5557fe83fcac0ff8161d.jpg"; 
     } else if (horaActual >= 12 && horaActual < 18) {
         saludo = "Buenas tardes";
-        imagenUrl = window.location.origin +"/images/tarde.png"; 
+        imagenUrl = "https://i.pinimg.com/564x/be/45/67/be45675469a95f39c07616bd188aa185.jpg"; 
     } else {
         saludo = "Buenas noches";
-        imagenUrl = window.location.origin +"/images/noche.png"; 
+        imagenUrl = "https://i.pinimg.com/564x/5d/9e/41/5d9e4180fdfa967169eb4c2b62b2ba96.jpg"; 
     }
 
     // Mostrar saludo e imagen
