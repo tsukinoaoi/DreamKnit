@@ -9,13 +9,13 @@ function mostrarSaludo() {
     if (horaActual >= 6 && horaActual < 12)
          {
         saludo = "Buenos días";
-        imagenUrl = "./images/mañana.png"; 
+        imagenUrl = "../images/mañana.png"; 
     } else if (horaActual >= 12 && horaActual < 18) {
         saludo = "Buenas tardes";
         imagenUrl = "./images/tarde.png"; 
     } else {
         saludo = "Buenas noches";
-        imagenUrl = "./images/noche.png"; 
+        imagenUrl = "../images/noche.png"; 
     }
 
     // Mostrar saludo e imagen
