@@ -46,12 +46,8 @@
 
     <div class="container my-4">
         <h1 class="text-center">Pedido Personalizado</h1>
-   <!-- Botones adicionales -->
-   <div class="d-flex justify-content-between mb-4">
-    <a href="catalogo.html" class="btn btn-secondary">
-        <i class="fas fa-box-open"></i> regresar
-    </a>
-</div>
+
+ 
         <form id="customOrderForm">
             <div class="mb-3">
                 <label for="material" class="form-label">Material</label>
@@ -108,12 +104,11 @@
 
         <div id="successMessage" class="alert alert-success mt-4" style="display: none;">
             ¡Tu pedido personalizado ha sido enviado exitosamente!
-            <!-- Botón para regresar a la página principal -->
-        <div class="text-center mt-4">
-            <a href="catalogo.html" class="btn btn-secondary">Volver a catalogo</a>
-        </div>
+        
         <br>
         </div>
+        <!-- Botón para regresar a la página principal -->
+        <a href="javascript:history.back()" class="back-button"> volver</a> <!-- Botón de regreso -->
     </div>
 
     <script>
@@ -180,10 +175,7 @@
         });
     </script>
 
-    <footer class="text-center text-white" style="background-color: #EE457C;">
-        <br>
-        <br>
-        <br>
+    <footer>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 

@@ -10,7 +10,13 @@
     <link rel="stylesheet" href="css/estilos.css">
 
     <title>DreamKnit</title>
-
+    <style>
+        .modal-body img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+    </style>
   </head>
   <body >
 
@@ -45,6 +51,51 @@
       </div>
   </div>
 
+
+ <!-- Modal -->
+ <div class="modal fade" id="commentsModal" tabindex="-1" aria-labelledby="commentsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="commentsModalLabel">Comentarios sobre Lazos hechos crochet</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Comentarios -->
+                <div class="list-group">
+                    <div class="list-group-item d-flex align-items-start">
+                        <img src="images/user1.jfif" alt="User 1">
+                        <div class="ms-3">
+                            <strong><a>Maria Jose</a></strong>
+                            <p>Me encanta el tejido de lana, es muy cálido.</p>
+                            <span>⭐️⭐️⭐️⭐️⭐️</span>
+                        </div>
+                    </div>
+                    <div class="list-group-item d-flex align-items-start">
+                        <img src="images/user2.jfif" alt="User 2">
+                        <div class="ms-3">
+                            <strong><a>Leonor</a></strong>
+                            <p>Los colores son muy bonitos y vibrantes.</p>
+                            <span>⭐️⭐️⭐️⭐️</span>
+                        </div>
+                    </div>
+                    <div class="list-group-item d-flex align-items-start">
+                        <img src="images/user3.jfif" alt="User 3">
+                        <div class="ms-3">
+                            <strong><a>Anónimo</a></strong>
+                            <p>Perfecto para el invierno.</p>
+                            <span>⭐️⭐️⭐️⭐️⭐️</span>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-- Modal fin -->
+
  
 <div class="container-fluid" style="background-color:  #EE457C;  padding: 20px;  border-bottom-left-radius: 50px; border-bottom-right-radius: 50px; " >
    <div class="row" >
@@ -71,7 +122,7 @@
     </div>
     <div class="col-4" style="align-items: center; text-align: center; justify-content: center;" >
         <p style="color: white;" >comentarios</p>
-        <h5 style="color: white;" >5</h5>
+        <h5 style="color: white;" >3</h5>
     </div>
    </div>
 
@@ -105,6 +156,10 @@
                 <!-- Vistas -->
                 <p class="card-text" style="padding: 5px;">
                     <small class="text-muted">120 vistas</small>
+                       <!-- Etiqueta <a> para abrir el modal -->
+                        <a class="comment-link" data-bs-toggle="modal" data-bs-target="#commentsModal">
+                           Ver Comentarios
+                            </a>
                 </p>
             </div>
         </div>
@@ -147,9 +202,6 @@
         </div>
     </div>
     <div class="container my-4">
-        <h4  style=" text-align: left; color: #EE457C;">Más tutoriales</h4>
-        <p  style=" text-align: justify;  color: rgb(255, 255, 255);">videos paso a poco para poder crear tus propias manualidades</p>
-
         <div class="row">
             <div class="card" style="width: 100%; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
                 <!-- Video -->
@@ -181,9 +233,6 @@
         </div>
     </div>
     <div class="container my-4">
-        <h4  style=" text-align: left; color: #EE457C;">Más tutoriales</h4>
-        <p  style=" text-align: justify;  color: rgb(255, 255, 255);">videos paso a poco para poder crear tus propias manualidades</p>
-
         <div class="row">
             <div class="card" style="width: 100%; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
                 <!-- Video -->

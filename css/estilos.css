@@ -53,12 +53,12 @@
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     bottom: 0%; /* Distancia desde la parte inferior */
     right: 20px; /* Distancia desde la derecha */
-    background-color: #b7a9fd; /* Color de fondo */
+    background-color: #a290fc; /* Color de fondo */
     color: black; /* Color del texto */
     border: 1px; /* Sin borde */
-    border-radius: 35%; /* Botón circular */
+    border-radius: 37%; /* Botón circular */
     width: 85px; /* Ancho del botón */
-    height: 45px; /* Alto del botón */
+    height: 40px; /* Alto del botón */
     display: flex;
     align-items: center; /* Centrar el contenido verticalmente */
     justify-content: center; /* Centrar el contenido horizontalmente */
