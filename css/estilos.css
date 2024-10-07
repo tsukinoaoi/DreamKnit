@@ -51,7 +51,7 @@
  .back-button {
     position: fixed;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    bottom: 1%; /* Distancia desde la parte inferior */
+    bottom: 1.5%; /* Distancia desde la parte inferior */
     right: 20px; /* Distancia desde la derecha */
     background-color: #D1BCFF; /* Color de fondo */
     color: #3B2572; /* Color del texto */
