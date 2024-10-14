@@ -43,6 +43,45 @@ function mostrarHoraActual() {
     horaElement.textContent = `Hora: ${horas}:${minutos}:${segundos} ${ampm}`;
 }
 
+function iniciarContador() {
+    const fechaFin = new Date(document.getElementById("fechaFin").textContent);
+
+    function actualizarContador() {
+        const ahora = new Date();
+        const tiempoRestante = fechaFin - ahora;
+
+        // Calcular días, horas, minutos y segundos restantes
+        const dias = Math.floor(tiempoRestante / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((tiempoRestante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((tiempoRestante % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((tiempoRestante % (1000 * 60)) / 1000);
+
+        // Mostrar los resultados en el HTML
+        document.getElementById("dias").textContent = dias;
+        document.getElementById("horas").textContent = horas;
+        document.getElementById("minutos").textContent = minutos;
+        document.getElementById("segundos").textContent = segundos;
+
+        // Mostrar mensaje de fin de promoción
+        document.getElementById("mensajeFin").textContent = `Válido hasta : ${fechaFin.toLocaleDateString()}`;
+
+        // Si el tiempo se ha acabado, mostrar un mensaje
+        if (tiempoRestante < 0) {
+            clearInterval(intervalo);
+            document.querySelector('.alert').innerHTML = "<strong>¡La promoción ha terminado!</strong>";
+        }
+    }
+
+    // Actualizar el contador cada segundo
+    actualizarContador(); // Llamar a la función para mostrar la cuenta inicial
+    const intervalo = setInterval(actualizarContador, 1000); // Actualiza cada segundo
+}
+
+// Iniciar el contador al cargar la página
+window.onload = iniciarContador;
+
+
+
 // Actualizar la hora cada segundo
 setInterval(mostrarHoraActual, 1000);
 
@@ -53,3 +92,46 @@ mostrarHoraActual();
 
 // Llamar a la función cuando se carga la página
 mostrarSaludo();
+
+
+
+function abrirModalOrden(producto) {
+    // Obtener los detalles del producto
+    const nombreProducto = producto.querySelector('.card-title').textContent;
+    const precioProducto = producto.querySelector('.precio strong').textContent;
+
+    // Rellenar los detalles en el modal
+    document.getElementById("detallesProducto").textContent = `Producto: ${nombreProducto}\nPrecio: ${precioProducto}`;
+
+    // Asignar el evento al botón para enviar la orden
+    document.getElementById("btnEnviarOrden").onclick = function() {
+        enviarOrden(nombreProducto, precioProducto);
+    };
+
+    // Mostrar el modal
+    const modal = new bootstrap.Modal(document.getElementById('ordenModal'));
+    modal.show();
+}
+
+function enviarOrden(nombreProducto, precioProducto) {
+    const nombreCliente = document.getElementById("nombreCliente").value;
+    const direccionEnvio = document.getElementById("direccionEnvio").value;
+
+    const mensaje = `Nuevo pedido:\nNombre del Cliente: ${nombreCliente}\nDirección de Envío: ${direccionEnvio}\nProducto: ${nombreProducto}\nPrecio: ${precioProducto}`;
+    
+    // Aquí reemplaza 'YOUR_PHONE_NUMBER' con el número de teléfono al que deseas enviar el mensaje
+    const telefono = '50588237177';
+    const apiURL = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(mensaje)}`;
+
+    // Redirigir a la URL de WhatsApp
+    window.open(apiURL, '_blank');
+
+    // Limpiar el modal
+    document.getElementById("nombreCliente").value = '';
+    document.getElementById("direccionEnvio").value = '';
+    
+    // Cerrar el modal
+    const modal = bootstrap.Modal.getInstance(document.getElementById('ordenModal'));
+    modal.hide();
+}
+

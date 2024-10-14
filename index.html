@@ -86,11 +86,39 @@
             </div>   
     </div>
 <br>
-<br>
-<div class="container-fluid"  style="background-color: #EE457C; border-top-left-radius: 50px; " >
+<div class="alert alert-warning" role="alert">
+  <strong>Aprovecha nuestras ofertas.</strong>
+  Tiempo restante de la promoción. <span id="fechaFin"style="display:none" >11/8/2024</span>
+  <div class="countdown mt-3">
+      <div class="d-flex justify-content-center">
+          <div class="text-center me-3">
+              <h1 id="dias" class="display-4">0</h1>
+              <p>Días</p>
+          </div>
+          <div class="text-center me-3">
+              <h1 id="horas" class="display-4">0</h1>
+              <p>Horas</p>
+          </div>
+          <div class="text-center me-3">
+              <h1 id="minutos" class="display-4">0</h1>
+              <p>Minutos</p>
+          </div>
+          <div class="text-center">
+              <h1 id="segundos" class="display-4">0</h1>
+              <p>Segundos</p>
+          </div>
+      </div>
+      <p class="mt-2" id="mensajeFin"></p>
+  </div>
+  <a href="#ofertas" class="btn btn-danger" style="width: 100%;">Ver más</a>
+</div>
+
+
+
+<div class="container-fluid"  style="background-color: #EE457C; border-top-left-radius: 50px; padding-bottom: 20px;" >
 <br>
 <h5  style=" text-align: right; color: white;">Inspírate con Nuestras </h5>
-<h6 style="text-align: right; color: white;" >Ideas y consejos</h6>
+<h6 style="text-align: right; color: white;" >Guias  y productos</h6>
 <br>
 
 
@@ -100,7 +128,7 @@
       <img src="images/icon_video.png" class="card-img-top" alt="Imagen de tutorial">
       <div class="card-body" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
           <h5 class="card-title">Tutoriales</h5>
-          <p class="card-text" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">videos ilustrativos para aprender</p>
+          <p class="card-text" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">videos ilustrativos</p>
           <a href="videos.html" class="btn btn-primary" style="background-color: rgb(238, 64, 124); width: 100%;">Ver videos</a>
       </div>
     </div>
@@ -111,17 +139,78 @@
       <img src="images/icon_catalogo.png" class="card-img-top" alt="Imagen de tutorial">
       <div class="card-body" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
           <h5 class="card-title">Catálogo</h5>
-          <p class="card-text" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Artículos 100% artesanales para ti</p>
+          <p class="card-text" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">100% artesanal</p>
           <a href="catalogo.html" class="btn btn-primary" style="background-color: rgb(238, 64, 124);width: 100%;">Ver más</a>
       </div>
     </div>
   </div>
 </div>
 
-
-
-
   </div>
+
+
+  <div class="container-fluid"  id="ofertas" >
+    <div class="container mt-4">
+      <h2 class="text-center" style="color: red;" >Promociones Especiales</h2>
+      <div class="overflow-auto">
+          <div class="d-flex flex-row" style="white-space: nowrap;">
+              <div class="card me-3" id="cardProm" style="min-width: 250px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 15px;">
+                  <img src="images/agujascolores.jpg" class="card-img-top" alt="Producto 1">
+                  <div class="card-body">
+                      <h5 class="card-title">Set agujas</h5>
+                      <p class="precio text-danger"><s>$18.00</s> <strong>$10.00</strong></p>
+                      <a href="javascript:void(0);" class="btn btn-success mt-2" onclick="abrirModalOrden(this.parentElement.parentElement)">
+                        <i class="fas fa-shopping-cart"></i> Ordenar ahora
+                    </a>
+                  </div>
+              </div>
+  
+              <div class="card me-3"  id="cardProm" style="min-width: 250px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 15px;">
+                  <img src="images/kit.jpg" class="card-img-top" alt="Producto 2">
+                  <div class="card-body">
+                      <h5 class="card-title">Kit de tejido</h5>
+                      <p class="precio text-danger"><s>$30.00</s> <strong>$20.00</strong></p>
+                      <a href="javascript:void(0);" class="btn btn-success mt-2" onclick="abrirModalOrden(this.parentElement.parentElement)">
+                        <i class="fas fa-shopping-cart"></i> Ordenar ahora
+                    </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  </div>
+
+<!-- Modal -->
+<div class="modal fade" id="ordenModal" tabindex="-1" aria-labelledby="ordenModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="ordenModalLabel">Realizar Orden</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="mb-3">
+                  <label for="nombreCliente" class="form-label">Nombre del Cliente</label>
+                  <input type="text" class="form-control" id="nombreCliente" required>
+              </div>
+              <div class="mb-3">
+                  <label for="direccionEnvio" class="form-label">Dirección de Envío</label>
+                  <input type="text" class="form-control" id="direccionEnvio" required>
+              </div>
+              <div class="mb-3">
+                  <h6>Detalles del Producto</h6>
+                  <p id="detallesProducto"></p>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary" id="btnEnviarOrden">Enviar Orden</button>
+          </div>
+      </div>
+  </div>
+</div>
+
 
 
     <!-- se recomienda cargar las librerias de js al final de la pagina-->
@@ -132,7 +221,9 @@
   </body>
   <footer>
       <!-- Footer -->
-  <footer style="background-color: #EE457C;">
+  <footer>
+<br>
+<br>
 <br>
 <br>
   </footer>

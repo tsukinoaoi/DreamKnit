@@ -67,3 +67,12 @@
     cursor: pointer; /* Cambiar el cursor al pasar el mouse */
     z-index: 1000; /* Asegurarse de que esté en frente */
 }
+
+#cardProm {
+    min-width: 250px; /* Establece un ancho mínimo para las tarjetas */
+    transition: transform 0.2s;
+}
+
+#cardProm:hover {
+    transform: scale(1.02);
+}
